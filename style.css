@@ -1,0 +1,128 @@
+body {
+  margin: 0;
+  padding: 20;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+p, span, h1, .side {
+  margin: 2em;
+}
+
+/* add some color */
+.navybg {
+  background-color: #011627;
+}
+
+.redtxt {
+  color: #FF0021;
+}
+
+.tealbg {
+  background-color: #2EC4B6;
+}
+
+.whitetxt {
+  color: #FDFFFC;
+}
+
+.main-head {
+  grid-area: header;
+  height: 15vh;
+  width: 100vw;
+  opacity: 0.5;
+  color: white;
+  /* padding: 0.5em; */
+}
+
+.main-head .logo {
+  height: 15vh;
+  width: 10vw;
+  /* border-radius: 30px 30px 30px 5px; */
+  clip-path: circle(20px at 20px 20px);
+  position: relative;
+  z-index: 1;
+  top: 3vh;
+  left: 3vh;
+}
+
+.content {
+  grid-area: content;
+}
+
+.main-nav {
+  grid-area: nav;
+  position: absolute;
+  top: 1vh;
+  left: 60vw;
+}
+
+.side {
+  grid-area: sidebar;
+}
+.ad {
+  grid-area: ad;
+}
+.main-footer {
+  grid-area: footer;
+}
+
+
+
+
+.main-nav {
+
+}
+
+.main-nav li {
+  margin: 0 3vw;
+  padding-right: 3vw;
+}
+
+.main-footer h4 {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.icon-group, .ad h4 {
+  padding: 10vh;
+}
+
+.side {
+
+}
+
+.main-
+.wrapper {
+  display: grid;
+  grid-gap: 40px 0;
+  grid-template-areas:
+    "header"
+    "nav"
+    "content"
+    "sidebar"
+    "ad"
+    "footer";
+}
+
+/* change the layout on small devices */
+@media (min-width: 500px) {
+  .wrapper {
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas:
+      "header  header"
+      "nav     nav"
+      "sidebar content"
+      "ad      footer";
+  }
+  nav ul {
+    display: flex;
+    justify-content: space-between;
+  }
+}
