@@ -114,12 +114,22 @@ i {
 .banner-img {
   height: 90vh;
   width: 100%;
+  background: url('images/lady-pointing.jpeg');
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
   background-position: center;
   margin: 0;
   /* -webkit-clip-path: polygon(0 0, 100% 0%, 100% 57%, 0% 100%);
 clip-path: polygon(0 0, 100% 0%, 100% 57%, 0% 100%); */
+}
+
+@media screen and (max-width: 700px) {
+  .banner-img {
+    background: linear-gradient(#FDFFFC;
+    , #2EC4B6);
+  }
 }
 
 .content {
@@ -135,9 +145,10 @@ clip-path: polygon(0 0, 100% 0%, 100% 57%, 0% 100%); */
 .content ul li i {
   position: relative;
   left: 3vw;
+  margin-left:36%;
 }
 
-.content ul li h2, h6 {
+.content ul li h2 {
   text-align: center;
 }
 
@@ -161,11 +172,16 @@ clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); */
 
 .main-nav {
   grid-area: nav;
+  display: inline-flex;
+}
+
+.main-nav ul {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .main-nav li {
-  margin: 0 3vw;
-  padding-right: 30px;
+  margin: 0 6vw;
   display: inline;
 }
 
@@ -191,6 +207,10 @@ clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); */
 
 /* Button Component */
 
+button {
+  margin-left: 2%;
+}
+
 .button-opaque {
   background-color: #2EC4B6;
   border-radius: 0px;
@@ -202,6 +222,7 @@ clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); */
   text-shadow: 1px 1px #000000;
   font-size: 24pt;
   transition: all .2s ease-in-out;
+  border: 1px solid #011627;
 }
 
 .button-opaque:hover {
@@ -255,6 +276,8 @@ clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); */
   font-size: 14pt;
   border: 1px solid grey;
   transition: all .2s ease-in-out;
+  box-shadow: 2px 0 2px 2px;
+  text-align: center;
 }
 
 .box:hover {
@@ -291,16 +314,25 @@ clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); */
 .wrapper {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  grid-template-areas: "header  header" "nav nav" "main  main" "main    main" "footer      footer";
+  grid-template-areas:
+  "header header"
+  "nav nav"
+  "main  main"
+  "main main"
+  "footer footer";
 }
 
 /* 4. Media Queries */
 
 @media (max-width: 500px) {
-  .main- .wrapper {
+  .main-head .wrapper {
     display: grid;
     grid-gap: 20px 0;
-    grid-template-areas: "header" "nav" "main" "ad" "footer";
+    grid-template-areas:
+    "header"
+    "nav"
+    "main"
+    "footer";
   }
   nav ul li {
     display: flex;
@@ -308,28 +340,41 @@ clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); */
   }
 }
 
-@media screen and (max-width: 1000px) {
-  /* .main-head {
-    display: grid;
-    grid-gap: 1em 0;
-    /* testing */
-    /* grid-template-areas: "logo" "contact" "contact" "contact"; */
-  /* } */
+@media screen and (min-width: 700px) and (max-width: 1000px) {
   .main-head .logo {
     position: relative;
-    left: 32vw;
+    left: 36vw;
+    margin: 4vh;
   }
   .contact-group {
     position: relative;
-    top: -7vh;
-    left: -19vw;
+    top: -3vh;
+    left: -21vw;
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
   .main-nav ul {
     position: relative;
     left: -4vw;
+  }
+
+  .main-head .logo {
+    position: relative;
+    left: 32vw;
+    margin: 2vh;
+  }
+
+  .contact-group {
+    position: relative;
+    top: -3vh;
+    left: -6vw;
+  }
+
+  .wrapper-2 {
+    left: -8vw;
+    top: 84vh;
+    margin-bottom: 210px;
   }
 }
 
