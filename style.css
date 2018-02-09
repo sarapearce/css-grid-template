@@ -1,3 +1,17 @@
+/* Table of Contents
+
+1. Elements
+2. Color
+3. Components
+    Header Component
+    Main Component
+    Footer Component
+    Base Component
+4. Media Queries
+ */
+
+/* 1. Elements */
+
 body {
   margin: 0;
   padding: 20;
@@ -11,11 +25,8 @@ ul {
   list-style: none;
 }
 
-p, span, h1, .side {
-  margin: 2em;
-}
+/* 2. Color */
 
-/* add some color */
 .navybg {
   background-color: #011627;
 }
@@ -32,97 +43,149 @@ p, span, h1, .side {
   color: #FDFFFC;
 }
 
+.goldtxt {
+  color: #FF9F1C;
+}
+
+.goldbg {
+  color:
+}
+
+i {
+  color: #2EC4B6;
+}
+
+/* 3. Components */
+
+/* Header Component */
+
 .main-head {
   grid-area: header;
-  height: 15vh;
-  width: 100vw;
-  opacity: 0.5;
-  color: white;
-  /* padding: 0.5em; */
+  display: grid;
+  grid-gap: 20px 0;
+  grid-template-columns: 1fr 4fr;
+  grid-template-areas: "logo contact-1 contact-2 contact-3";
 }
 
 .main-head .logo {
+  border: 2px solid pink;
   height: 15vh;
   width: 10vw;
-  /* border-radius: 30px 30px 30px 5px; */
-  clip-path: circle(20px at 20px 20px);
+  /* clip-path: circle(20px at 100px 0px); */
+  margin: 2vh;
+}
+
+.main-head .contact-group li {
+  border: 2px solid blue;
+  float: right;
+  margin: 20px;
+}
+
+.contact-group {
   position: relative;
-  z-index: 1;
-  top: 3vh;
-  left: 3vh;
+  left: -20vw;
+  top: -1vh;
+}
+
+/* Main Content Component */
+
+.banner {
+  grid-area: main;
+}
+
+.banner-img {
+  height: 50vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center;
+  margin: 0;
+  /* -webkit-clip-path: polygon(0 0, 100% 0%, 100% 57%, 0% 100%);
+clip-path: polygon(0 0, 100% 0%, 100% 57%, 0% 100%); */
 }
 
 .content {
-  grid-area: content;
+  grid-area: main;
+  padding: 3em;
+  margin: 3em;
+  margin-top: 60vh;
 }
+
+.hexagon {
+  height: 12vh;
+  width: 12vw;
+  position: relative;
+  z-index: -1;
+  /* -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); */
+}
+
+/* .content .hexagon */
+
+/* Navigation Component */
 
 .main-nav {
   grid-area: nav;
-  position: absolute;
-  top: 1vh;
-  left: 60vw;
-}
-
-.side {
-  grid-area: sidebar;
-}
-.ad {
-  grid-area: ad;
-}
-.main-footer {
-  grid-area: footer;
-}
-
-
-
-
-.main-nav {
-
+  margin-left: 24vw;
 }
 
 .main-nav li {
   margin: 0 3vw;
-  padding-right: 3vw;
+  padding-right: 30px;
+  display: inline;
 }
 
-.main-footer h4 {
-  margin-left: auto;
-  margin-right: auto;
+/* Footer Component */
+
+.main-footer {
+  grid-area: footer;
+  /* -webkit-clip-path: polygon(0% 57%, 100% 0%, 100% 100%, 0% 100%);
+  clip-path: polygon(0% 100%, 100% 0%, 100% 100%, 0% 100%); */
 }
 
-.icon-group, .ad h4 {
+.icon-group {
   padding: 10vh;
 }
 
-.side {
+/* Base Component */
 
-}
-
-.main-
 .wrapper {
   display: grid;
-  grid-gap: 40px 0;
+  grid-template-columns: 1fr 2fr;
   grid-template-areas:
-    "header"
-    "nav"
-    "content"
-    "sidebar"
-    "ad"
-    "footer";
+  "header  header"
+  "nav nav"
+  "main  main"
+  "main    main"
+  "footer      footer";
 }
 
-/* change the layout on small devices */
-@media (min-width: 500px) {
-  .wrapper {
-    grid-template-columns: 1fr 3fr;
-    grid-template-areas:
-      "header  header"
-      "nav     nav"
-      "sidebar content"
-      "ad      footer";
+/* 4. Media Queries */
+
+@media (max-width: 500px) {
+  .main- .wrapper {
+    display: grid;
+    grid-gap: 20px 0;
+    grid-template-areas: "header" "nav" "main" "ad" "footer";
   }
-  nav ul {
+  nav ul li {
     display: flex;
-    justify-content: space-between;
+    justify-content: left;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .main-head {
+    display: grid;
+    grid-gap: 1em 0;
+    grid-template-areas: "logo" "contact-1" "contact-2" "contact-3";
+  }
+  .main-head .logo {
+    position: relative;
+    left: 39vw;
+  }
+  .contact-group {
+    margin-top: 20vh;
+    margin-right: 21vh;
   }
 }

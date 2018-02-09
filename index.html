@@ -1,49 +1,96 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<title>Sara's Little CSS-Grid Template</title>
+  <title>Sara's Little CSS-Grid Template</title>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="./style.css"></link>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0"> -->
 
 </head>
-<body>
-	<div class="wrapper">
-		<header class="main-head navybg">
-			<div class="logo tealbg"></div>
-      <nav class="main-nav">
-  			<ul>
-  				<li>
-  					<a class="whitetxt" href="">Nav 1</a>
-  				</li>
-  				<li>
-  					<a class="whitetxt" href="">Nav 2</a>
-  				</li>
-  				<li>
-  					<a class="whitetxt" href="">Nav 3</a>
-  				</li>
-  			</ul>
-  		</nav>
-		</header>
 
-		<article class="content">
-			<h1>Main article area</h1>
-			<p>In this layout, we display the areas in source order for any screen less that 500 pixels wide. We go to a two column layout, and then to a three column layout by redefining the grid, and the placement of items on the grid.</p>
-		</article>
-		<aside class="side">
-			Sidebar
-		</aside>
-		<div class="ad navybg">
-			<h4 class="whitetxt">Advertising</h4>
-		</div>
-		<footer class="main-footer navybg">
-        <div class="icon-group">
+<body>
+  <div class="wrapper">
+    <header class="main-head navybg">
+      <div class="logo tealbg"></div>
+      <div class="contact-group">
+        <ul>
+          <li>
+            <a class="redtxt contact-1" href="">
+              <img width="150px" height="50px"/>
+              Contact 1</a>
+          </li>
+          <li>
+            <a class="redtxt contact-2" href="">
+              <img width="150px" height="50px"/>
+              Contact 2</a>
+          </li>
+          <li>
+            <a class="redtxt contact-3" href="">
+              <img width="150px" height="50px"/>
+              Contact 3</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <nav class="main-nav">
+      <ul>
+        <li>
+          <a class="redtxt" href="">Nav 1</a>
+        </li>
+        <li>
+          <a class="redtxt" href="">Nav 2</a>
+        </li>
+        <li>
+          <a class="redtxt" href="">Nav 3</a>
+        </li>
+      </ul>
+    </nav>
+    <main class="banner">
+      <img class="banner-img" src="images/ferriswheel.jpg" alt="ferris wheel" />
+    </main>
+    <main class="content">
+
+      <h1>This is a title!</h1>
+      <ul>
+        <li>
+          <div class="hexagon">
+            <i class="fa fa-suitcase fa-3x"></i>
+            <h4>Taxation</h4>
+          </div>
+        </li>
+
+        <li>
+          <div class="hexagon">
+            <i class="fa fa-certificate fa-5x"></i>
+            <h4>Financial Planning</h4>
+          </div>
+        </li>
+
+        <li>
+          <div class="hexagon">
+            <i class="fa fa-chart-area fa-5x"></i>
+          </div>
+        </li>
+
+        <li>
+          <div class="hexagon">
+            <i class="fa fa-users fa-5x"></i>
+          </div>
+        </li>
+
+      </ul>
+
+    </main>
+    <footer class="main-footer navybg">
+      <div class="icon-group">
         <i class="whitetxt fa fa-facebook"></i>
         <i class="whitetxt fa fa-twitter"></i>
         <i class="whitetxt fa fa-instagram"></i>
       </div>
-		</footer>
-	</div>
+    </footer>
+  </div>
 </body>
+
 </html>
