@@ -57,10 +57,6 @@ i {
   color: #3F94FF;
 }
 
-.bluebg {
-
-}
-
 /* 3. Components */
 
 /* Header Component */
@@ -71,6 +67,7 @@ i {
 }
 
 .logo {
+  background-color: #f8d978;
   height: 100px;
   width: 200px;
   /* margin: 2vh; */
@@ -78,7 +75,7 @@ i {
   left: 25px;
   top: 20px;
   -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 }
 
 .main-head .contact-group li {
@@ -95,19 +92,19 @@ clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
   float: right;
 }
 
-
 .contact-icon {
   margin-right: 2vw;
 }
 
- .contact  h6 {
-   position: relative;
-   left: 4vw;
- }
+.contact h6 {
+  position: relative;
+  left: 4vw;
+}
 
 .contact {
   display: inline-flex;
 }
+
 /* Main Content Component */
 
 .banner {
@@ -124,8 +121,6 @@ clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
   /* -webkit-clip-path: polygon(0 0, 100% 0%, 100% 57%, 0% 100%);
 clip-path: polygon(0 0, 100% 0%, 100% 57%, 0% 100%); */
 }
-
-
 
 .content {
   grid-area: main;
@@ -179,7 +174,7 @@ clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); */
 .main-footer {
   grid-area: footer;
   height: 250px;
-  margin-top: 50vh;
+  margin-top: 60vh;
   -webkit-clip-path: polygon(0% 57%, 100% 0%, 100% 100%, 0% 100%);
   clip-path: polygon(0% 100%, 100% 0%, 100% 100%, 0% 100%);
 }
@@ -197,7 +192,7 @@ clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); */
 /* Button Component */
 
 .button-opaque {
-  background-color: #3F94FF;
+  background-color: #2EC4B6;
   border-radius: 0px;
   padding: 8px 20px;
   margin: 10px;
@@ -241,7 +236,6 @@ clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); */
   left: 4vw;
 }
 
-
 .wrapper-2 {
   position: relative;
   top: 72vh;
@@ -249,7 +243,7 @@ clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); */
   display: grid;
   grid-gap: 20px;
   grid-template-columns: 1fr 1fr;
-  background-coldsor: transparent;
+  background-color: transparent;
   color: #444;
 }
 
@@ -315,24 +309,21 @@ clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); */
 }
 
 @media screen and (max-width: 1000px) {
-  .main-head {
+  /* .main-head {
     display: grid;
     grid-gap: 1em 0;
     /* testing */
     /* grid-template-areas: "logo" "contact" "contact" "contact"; */
-  }
+  /* } */
   .main-head .logo {
     position: relative;
     left: 32vw;
   }
-
   .contact-group {
     position: relative;
     top: -7vh;
     left: -19vw;
   }
-
-
 }
 
 @media screen and (max-width: 600px) {
@@ -342,5 +333,71 @@ clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); */
   }
 }
 
+.fade-in {
+  -webkit-animation: fadein 2s;
+  /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 2s;
+  /* Firefox < 16 */
+  -ms-animation: fadein 2s;
+  /* Internet Explorer */
+  -o-animation: fadein 2s;
+  /* Opera < 12.1 */
+  animation: fadein 2s;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Firefox < 16 */
+
+@-moz-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Internet Explorer */
+
+@-ms-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Opera < 12.1 */
+
+@-o-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+}
 
 }
