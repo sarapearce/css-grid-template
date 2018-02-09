@@ -53,12 +53,12 @@ i {
   color: #FDFFFC;
 }
 
-.goldtxt {
-  color: #FF9F1C;
+.bluetxt {
+  color: #3F94FF;
 }
 
-.goldbg {
-  color:
+.bluebg {
+
 }
 
 /* 3. Components */
@@ -67,28 +67,47 @@ i {
 
 .main-head {
   grid-area: header;
-  display: grid;
-  grid-gap: 10px 0;
-  grid-template-columns: 1fr 4fr;
+  height: auto;
 }
 
-.main-head .logo {
+.logo {
   height: 100px;
   width: 200px;
-  margin: 2vh;
+  /* margin: 2vh; */
+  position: relative;
+  left: 25px;
+  top: 20px;
+  -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 }
 
 .main-head .contact-group li {
-  border: 2px solid blue;
+  grid-area: li;
   margin: 20px;
-  width: 200px;
+  /* width: 200px; */
 }
 
 .contact-group {
+  display: flex;
   position: relative;
-  top: -1vh;
+  top: -14vh;
+  margin-right: 15px;
+  float: right;
 }
 
+
+.contact-icon {
+  margin-right: 2vw;
+}
+
+ .contact  h6 {
+   position: relative;
+   left: 4vw;
+ }
+
+.contact {
+  display: inline-flex;
+}
 /* Main Content Component */
 
 .banner {
@@ -96,19 +115,17 @@ i {
 }
 
 .banner-img {
-  height: 102vh;
+  height: 90vh;
   width: 100%;
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
   margin: 0;
-  -webkit-clip-path: polygon(0 0, 100% 0%, 100% 57%, 0% 100%);
-clip-path: polygon(0 0, 100% 0%, 100% 57%, 0% 100%);
+  /* -webkit-clip-path: polygon(0 0, 100% 0%, 100% 57%, 0% 100%);
+clip-path: polygon(0 0, 100% 0%, 100% 57%, 0% 100%); */
 }
 
-.banner-text {
-    margin-left: 11vw;
-}
+
 
 .content {
   grid-area: main;
@@ -118,7 +135,6 @@ clip-path: polygon(0 0, 100% 0%, 100% 57%, 0% 100%);
   padding: 2.5vw;
   margin: 1.5em;
   width: 10vw;
-  /* grid-column: col / span 2; */
 }
 
 .content ul li i {
@@ -126,11 +142,7 @@ clip-path: polygon(0 0, 100% 0%, 100% 57%, 0% 100%);
   left: 3vw;
 }
 
-.content ul li h2 {
-  text-align: center;
-}
-
-.content ul li h6 {
+.content ul li h2, h6 {
   text-align: center;
 }
 
@@ -178,12 +190,14 @@ clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); */
   margin-top: 3em;
 }
 
+.social {
+  margin: 2vw;
+}
+
 /* Button Component */
 
 .button-opaque {
-  background: #ff9f1c;
-  background: -webkit-linear-gradient(#ff9f1c, #cb8317);
-  background: linear-gradient(#ff9f1c, #cb8317);
+  background-color: #3F94FF;
   border-radius: 0px;
   padding: 8px 20px;
   margin: 10px;
@@ -192,6 +206,13 @@ clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); */
   text-align: center;
   text-shadow: 1px 1px #000000;
   font-size: 24pt;
+  transition: all .2s ease-in-out;
+}
+
+.button-opaque:hover {
+  background-color: #ffffff;
+  color: #F8DC3A;
+  transform: scale(1.1);
 }
 
 .button-transparent {
@@ -205,21 +226,28 @@ clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); */
   text-align: center;
   text-shadow: 0px 0px #000000;
   font-size: 24pt;
+  transition: all .2s ease-in-out;
+}
+
+.button-transparent:hover {
+  background-color: #000000;
+  transform: scale(1.1);
+  color: white;
 }
 
 .cover-banner {
   position: relative;
-  top: -88vh;
+  top: -75vh;
   left: 4vw;
 }
 
 
 .wrapper-2 {
   position: relative;
-  top: 84vh;
+  top: 72vh;
   margin: 13vw;
   display: grid;
-  grid-gap: 10px;
+  grid-gap: 20px;
   grid-template-columns: 1fr 1fr;
   background-coldsor: transparent;
   color: #444;
@@ -231,6 +259,12 @@ clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); */
   border-radius: 5px;
   padding: 20px;
   font-size: 14pt;
+  border: 1px solid grey;
+  transition: all .2s ease-in-out;
+}
+
+.box:hover {
+  transform: scale(1.1);
 }
 
 .box .box {
@@ -258,22 +292,6 @@ clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); */
   grid-row: row 2;
 }
 
-.e {
-  grid-column: 1 / 3;
-  grid-row: 1;
-}
-
-.f {
-  grid-column: 1;
-  grid-row: 2;
-}
-
-.g {
-  grid-column: 2;
-  grid-row: 2;
-}
-
-
 /* Base Component */
 
 .wrapper {
@@ -300,13 +318,29 @@ clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); */
   .main-head {
     display: grid;
     grid-gap: 1em 0;
-    grid-template-areas: "logo" "contact" "contact" "contact";
+    /* testing */
+    /* grid-template-areas: "logo" "contact" "contact" "contact"; */
   }
   .main-head .logo {
     position: relative;
     left: 32vw;
   }
+
   .contact-group {
-    margin: 14vh 20vw 0 -17vw;
+    position: relative;
+    top: -7vh;
+    left: -19vw;
   }
+
+
+}
+
+@media screen and (max-width: 600px) {
+  .main-nav ul {
+    position: relative;
+    left: -4vw;
+  }
+}
+
+
 }
