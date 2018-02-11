@@ -9,6 +9,7 @@
     Button Component
     Base Component
 4. Media Queries
+5. Animations
  */
 
 /* 1. Elements */
@@ -361,7 +362,7 @@ button {
 
   .main-head .logo {
     position: relative;
-    left: 32vw;
+    left: 28%;
     margin: 2vh;
   }
 
@@ -378,6 +379,7 @@ button {
   }
 }
 
+/* 5. Animations */
 .fade-in {
   -webkit-animation: fadein 2s;
   /* Safari, Chrome and Opera > 12.1 */
