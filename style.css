@@ -103,7 +103,7 @@ i {
 }
 
 .contact {
-  display: inline-flex;
+  display: inline-grid;
 }
 
 /* Main Content Component */
@@ -124,13 +124,6 @@ i {
   margin: 0;
   /* -webkit-clip-path: polygon(0 0, 100% 0%, 100% 57%, 0% 100%);
 clip-path: polygon(0 0, 100% 0%, 100% 57%, 0% 100%); */
-}
-
-@media screen and (max-width: 700px) {
-  .banner-img {
-    background: linear-gradient(#FDFFFC;
-    , #2EC4B6);
-  }
 }
 
 .content {
