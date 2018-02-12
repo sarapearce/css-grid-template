@@ -89,17 +89,12 @@ i {
   display: flex;
   position: relative;
   top: -14vh;
-  margin-right: 15px;
+  margin-right: 5%;
   float: right;
 }
 
-.contact-icon {
+.contact-logo {
   margin-right: 2vw;
-}
-
-.contact h6 {
-  position: relative;
-  left: 4vw;
 }
 
 .contact {
@@ -139,7 +134,7 @@ clip-path: polygon(0 0, 100% 0%, 100% 57%, 0% 100%); */
 .content ul li i {
   position: relative;
   left: 3vw;
-  margin-left:36%;
+  margin-left: 36%;
 }
 
 .content ul li h2 {
@@ -189,7 +184,7 @@ clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); */
   clip-path: polygon(0% 100%, 100% 0%, 100% 100%, 0% 100%);
 }
 
-.icon-group {
+.logo-group {
   padding: 3em;
   float: right;
   margin-top: 3em;
@@ -308,30 +303,64 @@ button {
 .wrapper {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  grid-template-areas:
-  "header header"
-  "nav nav"
-  "main  main"
-  "main main"
-  "footer footer";
+  grid-template-areas: "header header" "nav nav" "main  main" "main main" "footer footer";
 }
 
 /* 4. Media Queries */
 
-@media (max-width: 500px) {
+/* getting the header just right */
+
+@media screen and (max-width: 500px) {
   .main-head .wrapper {
     display: grid;
     grid-gap: 20px 0;
-    grid-template-areas:
-    "header"
-    "nav"
-    "main"
-    "footer";
+    grid-template-areas: "header" "nav" "main" "footer";
   }
   nav ul li {
     display: flex;
     justify-content: left;
   }
+
+  .main-head .logo {
+    left: 25%;
+  }
+  .contact-group {
+    display: flex;
+    top: 0;
+    margin-right: 0;
+  }
+
+  .button-group {
+    position: relative;
+    left: 5%;
+  }
+
+  .banner-text {
+    left: 11%;
+  }
+}
+
+@media screen and (min-width: 500px) and (max-width: 700px) {
+  .main-nav ul {
+    position: relative;
+    left: -4vw;
+  }
+  .main-head .logo {
+    position: relative;
+    left: 28%;
+    margin: 2vh;
+  }
+  .contact-group {
+    position: relative;
+    top: -3vh;
+    left: -6vw;
+  }
+  .wrapper-2 {
+    left: -8vw;
+    top: 84vh;
+    margin-bottom: 210px;
+  }
+  .button-group {}
 }
 
 @media screen and (min-width: 700px) and (max-width: 1000px) {
@@ -345,34 +374,23 @@ button {
     top: -3vh;
     left: -21vw;
   }
+  .button-group {}
 }
 
-@media screen and (max-width: 700px) {
-  .main-nav ul {
-    position: relative;
-    left: -4vw;
-  }
+@media screen and (min-width: 1000px) and (max-width: 1200px) {
+  .main-head .logo {}
+  .contact-group {}
+  .button-group {}
+}
 
-  .main-head .logo {
-    position: relative;
-    left: 28%;
-    margin: 2vh;
-  }
-
-  .contact-group {
-    position: relative;
-    top: -3vh;
-    left: -6vw;
-  }
-
-  .wrapper-2 {
-    left: -8vw;
-    top: 84vh;
-    margin-bottom: 210px;
-  }
+@media screen and (min-width: 1200px) {
+  .main-head .logo {}
+  .contact-group {}
+  .button-group {}
 }
 
 /* 5. Animations */
+
 .fade-in {
   -webkit-animation: fadein 2s;
   /* Safari, Chrome and Opera > 12.1 */

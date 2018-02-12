@@ -11,8 +11,6 @@ There is only HTML and CSS in this codebase, so the repo can be downloaded and v
 HTML5
 css
 
-
-
 ### Installing
 
 ```
