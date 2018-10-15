@@ -1,21 +1,9 @@
-# Project Title
-
-CSS Grid Responsive Template, a framework free exercise.
+CSS Grid Responsive Template, a framework free template.
 
 ## Getting Started
 
-There is only HTML and CSS in this codebase, so the repo can be downloaded and viewed in browser.
+There is only HTML and CSS in this codebase, so the repo can be cloned and viewed in browser.
 
-### Prerequisites/Dependencies
+## Dependencies
 
-HTML5
-css
-```
-
-## Versioning
-
-This project can be found publicly at: https://github.com/sarapearce/css-grid-template
-
-## Authors
-
-* **Sara Pearce** - http://sarapearce.net
+There the only dependencies this project has is CSS3 and HTML5, and should work in any modern browser.
