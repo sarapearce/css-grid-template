@@ -1,4 +1,6 @@
-CSS Grid Responsive Template, a framework free template.
+## CSS Grid Responsive Template
+
+This project is a framework free template.
 
 ## Getting Started
 
